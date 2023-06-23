@@ -1,1 +1,1 @@
-# mocker-js
+# string-mockery-js
