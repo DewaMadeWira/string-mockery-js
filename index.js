@@ -1,4 +1,4 @@
-function mockString(wordParam){
+export function mockString(wordParam){
 
 
     let word = wordParam
@@ -33,8 +33,12 @@ function mockString(wordParam){
     index.forEach(element => {
         if(isUpperCase(word)==false){
             word = word.replaceAt(element, word.charAt(element).toUpperCase())
+            return
         }
+        
         word = word.replaceAt(element, word.charAt(element).toLowerCase())
+        
+        
         
     });
 
@@ -46,4 +50,3 @@ function isUpperCase(string) {
     return string.toUpperCase() === string;
 }
 
-module.exports = mockString
